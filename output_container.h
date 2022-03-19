@@ -30,10 +30,6 @@ struct has_output_function {
 template <typename T>
 inline constexpr bool has_output_function_v =
 has_output_function<T>::value;
-/* NB: Visual Studio 2017 (or below) may have problems with
- *     has_output_function_v<T>: you should then use
- *     has_output_function<T>::value instead, or upgrade to
- *     Visual Studio 2019. */
 
  // Output function for std::pair
 template <typename T, typename U>
